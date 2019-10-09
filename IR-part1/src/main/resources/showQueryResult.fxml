@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="455.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.showQueryResultsView">
+    <children>
+        <Label layoutX="235.0" layoutY="14.0" prefHeight="26.0" prefWidth="118.0" text="Query Results:">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font></Label>
+        <TableView fx:id="tableResults" layoutX="14.0" layoutY="50.0" prefHeight="286.0" prefWidth="551.0">
+            <columns>
+                <TableColumn fx:id="docIDCol" prefWidth="166.0" text="Document Number" />
+                <TableColumn fx:id="rankCol" prefWidth="153.0" text="Document Rank" />
+                <TableColumn fx:id="entitiesButton" prefWidth="229.0" text="Documents' Most Popular Entities" />
+            </columns>
+        </TableView>
+        <Button fx:id="btn_saveResults" layoutX="243.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleSaveResults" text="Save Query Results" />
+        <Label layoutX="32.0" layoutY="359.0" prefHeight="17.0" prefWidth="112.0" text="Query results path:" />
+        <TextField fx:id="txtfld_oneQueryResultsFilePath" layoutX="144.0" layoutY="355.0" prefHeight="25.0" prefWidth="343.0" promptText="Please enter a path to save the query results" />
+        <Button fx:id="btn_chooseDirectoryResult" layoutX="505.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleChooseResultsPath" prefHeight="25.0" prefWidth="68.0" text="Browse" />
+
+
+
+    </children>
+</AnchorPane>
